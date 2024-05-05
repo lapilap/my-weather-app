@@ -63,6 +63,7 @@ h1	{
     font-style: italic;
     font-variation-settings: "wdth" 87.5;
     font-size: 50px;
+    margin-bottom: 0;
 }
 
 footer {
@@ -78,6 +79,9 @@ footer {
     font-style: normal;
 }
 
+.hide {
+    display: none;
+}
 
 .current-country {
     font-size: 20px;
@@ -101,7 +105,13 @@ footer {
     box-shadow: 5px 5px 5px black;
 }
 
-.actual-temp {
+.icon {
+    position: absolute;
+    right: 130px;
+    top: 100px;
+}
+
+.temperature {
     position: absolute;
     right: 40px;
     top: 125px;

@@ -11,29 +11,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Noto+Serif:ital,wdth,wght@1,87.5,500&family=Roboto+Condensed:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAND/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAARAAAAEBAAABEAAAEAARAAEQABEAABEQEREBEQAAAREREREQAAAAEREREQAAAAEREREREAARERERERERERERERERERERAAEREREREAAAABEREREAAAABERERERAAABEQEREBEQAAEQABEAARAAEAAAEQAAAQEAAAARAAAAF+fgAAvn0AAM5zAADEIwAA4AcAAPAPAADgBwAAAAAAAAAAAADgBwAA8A8AAOAHAADEIwAAznMAAL59AAB+fgAA" rel="icon" type="image/x-icon">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>My weather application</title>
 </head>
 <body>
 <div class="container">
     <div class="nastias-box">
         <header>
-            <form class="form-control">
-                <input type="search" placeholder="Enter a city.." required>
+            <form class="form-control" id="search-form">
+                <input type="search" placeholder="Enter a city.." id="search-input" required>
                 <input type="submit" value="Search">
             </form>
         </header>
         <hr>
         <main>
-            <div class="current-weather">
+            <div id="welcome-message">
+                <h3>Hello friends!</h3>
+                Name the place, and we'll tell you what the weather's like 👌
+            </div>
+            <div id="loading-thingy" class="hide" style="text-align: center">
+                <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="current-weather hide" id="weather-forecast">
                 <div>
-                    <h1>Paris</h1>
-                    <p class="current-country">France</p>
+                    <h1 id="city">Bergen</h1>
+                    <p class="current-country" id="current-country">Norway</p>
                     <p>
-                        Saturday 15:32, moderate rain <br>
-                        Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+                        <span id="time">15:32</span>, <span id="condition">moderate rain</span> <br>
+                        Humidity: <strong id="humidity">87</strong>%, Wind: <strong id="wind-speed">7.2</strong>km/h
                     </p>
                 </div>
-                <div class="actual-temp">☀️ 14°C</div>
+                <div class="icon">
+                    <img id="weather-icon" alt="" src="">
+                </div>
+                <div class="temperature"><span id="temperature">14</span>°C</div>
             </div>
         </main>
         <footer>
