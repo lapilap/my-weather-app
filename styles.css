@@ -1,0 +1,103 @@
+
+
+body {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+hr {
+    border: 1px solid #b1e1f8;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #310a8e;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    display: flex;
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: #c2e5f6;
+    border: 2px solid #310a8e;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 0 8px 0;
+    cursor: pointer;
+    width: 80px;
+    margin-left: 20px;
+    flex: 0 1 auto;
+}
+
+input[type=search] {
+    border: 2px solid #310a8e;
+    background-color: #c2e5f6;
+    border-radius: 5px;
+    padding: 10px 0 8px 10px;
+    appearance: none;
+    flex: 1;
+}
+
+input[type=search]:hover,
+input[type=search]:focus {
+    background-color: #fff1eb;
+    transition: 1s;
+}
+
+input[type=submit]:hover {
+    background-color: #fff1eb;
+    transition: 1s;
+}
+
+h1	{
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    font-variation-settings: "wdth" 87.5;
+    font-size: 50px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    margin: 50px 5px 0px;
+}
+
+.current-weather {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: inherit;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.nastias-box {
+    border: 2px solid #310a8e;
+    border-radius: 5px;
+    padding: 30px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.actual-temp {
+    position: absolute;
+    right: 40px;
+    top: 125px;
+    font-size: 45px;
+}
