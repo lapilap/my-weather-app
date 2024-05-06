@@ -117,3 +117,20 @@ footer {
     top: 125px;
     font-size: 45px;
 }
+
+.forecast-date {
+    margin-left: 5px;
+}
+
+.forecast {
+    margin-top: 35px;
+}
+
+.forecast-icon {
+    margin: 5px 0 5px 5px;
+
+}
+
+.forecast-temperatures {
+    margin-top: 10px;
+}
