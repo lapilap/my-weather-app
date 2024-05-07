@@ -123,7 +123,9 @@ footer {
 }
 
 .forecast {
-    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }
 
 .forecast-icon {

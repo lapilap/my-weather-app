@@ -37,11 +37,14 @@ function parseResponse(response, city) {
 }
 
 function displayForecast() {
-    let forecast = document.querySelector("#forecast");
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    let forecastHtml = "";
 
-    forecast.innerHTML = `
-  <div class="forecast-day">
-                    <div class="forecast-date">Tue</div>
+    days.forEach(function (day) {
+        forecastHtml =
+            forecastHtml +
+            `<div class="forecast-day">
+                    <div class="forecast-date">${day}</div>
                     <div class="forecast-icon">🌤️</div>
                     <div class="forecast-temperatures">
                         <span class="high-temperature">
@@ -51,9 +54,13 @@ function displayForecast() {
                     </div>
                 </div>
 `;
+    });
+    let forecast = document.querySelector("#forecast");
+    forecast.innerHTML = forecastHtml;
 }
 
-document.querySelector("#time").innerHTML = getCurrentTime();
+
+    document.querySelector("#time").innerHTML = getCurrentTime();
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", setLocation);
