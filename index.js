@@ -36,7 +36,26 @@ function parseResponse(response, city) {
     document.querySelector("#loading-thingy").classList.add("hide");
 }
 
+function displayForecast() {
+    let forecast = document.querySelector("#forecast");
+
+    forecast.innerHTML = `
+  <div class="forecast-day">
+                    <div class="forecast-date">Tue</div>
+                    <div class="forecast-icon">🌤️</div>
+                    <div class="forecast-temperatures">
+                        <span class="high-temperature">
+                            <strong>15º</strong>
+                        </span>
+                        <span class="low-temperature">9º</span>
+                    </div>
+                </div>
+`;
+}
+
 document.querySelector("#time").innerHTML = getCurrentTime();
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", setLocation);
+
+displayForecast();
