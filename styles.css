@@ -129,6 +129,9 @@ footer {
 }
 
 .forecast-icon {
+    width: 70px;
+    height: 70px;
+    object-position: -15px 10px;
 
 }
 
